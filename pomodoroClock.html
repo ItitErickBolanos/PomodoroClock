@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Pomodoro Clock - FreeCodeCamp</title>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+        <link href="css/pomodoroClock.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="main-container" ng-app="pomodoroClock">
+            <div class="container" ng-cloak ng-controller="pomodoroController">
+              <div layout="column">
+                <div flex class="center-text">
+                  <h2>Pomodoro Clock</h2>
+                </div>
+                <div layout="row">
+                  <div flex="15" flex-offset="30"  class="center-text">
+                      <h3>Break length</h3>
+                  </div>
+                  <div flex="15" flex-offset="10" class="center-text">
+                      <h3>Session length</h3>
+                  </div>
+                </div>
+                <div layout="row">
+                  <div flex="20" flex-offset="35" layout="row" class="center-text">
+                      <div class="button minusBreak" flex="10">
+                        <h3>-</h3>
+                      </div>
+                      <h3 flex="10">{{ breakLength }}</h3>
+                      <div class="button plusBreak" flex="10">
+                        <h3>+</h3>
+                      </div>
+                  </div>
+                  <div flex="20" flex-offset="5" layout="row" class="center-text">
+                      <div class="button minusSession" flex="10">
+                        <h3>-</h3>
+                      </div>
+                      <h3 flex="10">{{ sessionLength }}</h3>
+                      <div class="button plusSession" flex="10">
+                        <h3>+</h3>
+                      </div>
+                  </div>
+                </div>
+                <div layout="row" layout-align="center center">
+                  <div class="center-text circle-counter" ng-click="startActiveValue()">
+                    <h1 style="margin-top: 20%">{{ activeValue }}</h1>
+                    <h1 style="margin-top: 20%">{{ activeLength }}</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="https://use.fontawesome.com/75ecc3166c.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+        <!-- Angular Material Library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+        <script type="text/javascript" src="js/Classes/Class.PomodoroClock.js"></script>
+        <script type="text/javascript" src="js/pomodoroClock.js"></script>
+    </body>
+</html>
