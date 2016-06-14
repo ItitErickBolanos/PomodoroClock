@@ -24,26 +24,26 @@
                 </div>
                 <div layout="row">
                   <div flex="20" flex-offset="35" layout="row" class="center-text">
-                      <div class="button minusBreak" flex="10">
+                      <div class="button minusBreak" flex="10" ng-click="reduceBreakLength()">
                         <h3>-</h3>
                       </div>
                       <h3 flex="10">{{ breakLength }}</h3>
-                      <div class="button plusBreak" flex="10">
+                      <div class="button plusBreak" flex="10" ng-click="incrementBreakLength()">
                         <h3>+</h3>
                       </div>
                   </div>
                   <div flex="20" flex-offset="5" layout="row" class="center-text">
-                      <div class="button minusSession" flex="10">
+                      <div class="button minusSession" flex="10" ng-click="reduceSessionLength()">
                         <h3>-</h3>
                       </div>
                       <h3 flex="10">{{ sessionLength }}</h3>
-                      <div class="button plusSession" flex="10">
+                      <div class="button plusSession" flex="10" ng-click="incrementSessionLength()">
                         <h3>+</h3>
                       </div>
                   </div>
                 </div>
                 <div layout="row" layout-align="center center">
-                  <div class="center-text circle-counter" ng-click="startActiveValue()">
+                  <div class="center-text circle-counter" ng-click="togglePomodoro()">
                     <h1 style="margin-top: 20%">{{ activeValue }}</h1>
                     <h1 style="margin-top: 20%">{{ activeLength }}</h1>
                   </div>

@@ -18,6 +18,6 @@ PomodoroClock.prototype = {
 
       return formattedSeconds;
     }
-    return seconds;
+    return seconds / 60;
   }
 };
