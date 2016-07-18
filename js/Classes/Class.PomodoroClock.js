@@ -11,7 +11,7 @@ PomodoroClock.prototype = {
 
   formatSecondsToMinutes: function(seconds){
     if (seconds % 60 != 0){
-      var numMinutes = Math.floor(seconds / 60),
+      var numMinutes = Math.floor(seconds / 60) > 10 ? Math.floor(seconds / 60) : "0" + Math.floor(seconds / 60),
           numSeconds = seconds % 60;
           numSeconds = numSeconds < 10 ? "0" + numSeconds : numSeconds;
           formattedSeconds = numMinutes + " : " + numSeconds;

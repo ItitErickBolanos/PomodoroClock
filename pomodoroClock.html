@@ -42,10 +42,11 @@
                       </div>
                   </div>
                 </div>
-                <div layout="row" layout-align="center center">
+                <div layout="row" layout-align="center center" class="timerWrapper">
                   <div class="center-text circle-counter" ng-click="togglePomodoro()">
-                    <h1 style="margin-top: 20%">{{ activeValue }}</h1>
-                    <h1 style="margin-top: 20%">{{ activeLength }}</h1>
+                    <h1 style="margin-top: 20%" class="center-h">{{ activeValue }}</h1>
+                    <h1 style="margin-top: 20%" class="center-h">{{ activeLength }}</h1>
+                    <span class="fill" ng-class="activeValue" ng-style="{'height' : percentage}"></span>
                   </div>
                 </div>
               </div>

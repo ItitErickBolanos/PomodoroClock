@@ -21,6 +21,7 @@ app.controller("pomodoroController", ['$scope', '$interval', function($scope, $i
                   $scope.sessionSeconds = $scope.sessionLength * 60;
                   $scope.activeValue = "Break";
               }
+              $scope.percentage = Math.abs(($scope.sessionSeconds / ($scope.sessionLength * 60)) * 100 - 100) + '%';
           } else {
               $scope.breakSeconds -= 1;
               $scope.activeLength = $scope.pomodoro.formatSecondsToMinutes($scope.breakSeconds);
@@ -29,7 +30,9 @@ app.controller("pomodoroController", ['$scope', '$interval', function($scope, $i
                   $scope.breakSeconds = $scope.breakLength * 60;
                   $scope.activeValue = "Session";
               }
+              $scope.percentage = Math.abs(($scope.breakSeconds / ($scope.breakLength * 60)) * 100 - 100) + '%';
           }
+
         }, 1000);
     }
   }

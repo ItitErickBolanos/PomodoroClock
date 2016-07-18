@@ -1,3 +1,7 @@
+html, body {
+    background: beige;
+    font-family: 'Roboto';
+}
 
 h1{
   font-size: 48px;
@@ -7,14 +11,44 @@ h1{
   text-align: center;
 }
 
+.center-h {
+    z-index: 20;
+    position: relative;
+}
+
 .circle-counter {
-  border: 1px solid;
-  border-radius: 100%;
+  border: 2px solid;
+  border-radius: 50%;
   width: 300px;
   height: 300px;
   cursor: pointer;
+  position: relative;
+  z-index: 20;
+  overflow: hidden;
+}
+
+.Session {
+    background: #7bf17b;
+}
+
+.Break {
+    background: #f58276;
 }
 
 .button {
   cursor: pointer;
+}
+
+
+.fill {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.timerWrapper {
+    z-index: 2;
 }
